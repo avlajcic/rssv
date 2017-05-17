@@ -7,7 +7,7 @@
 		file_put_contents($file, $txt, FILE_APPEND);
 	}
 		
-	if ($content = file_get_contents($file))
+	if ($content = file_get_contents($file, FILE_USE_INCLUDE_PATH))
 		echo $content;
 	
 	echo "aaaa";
