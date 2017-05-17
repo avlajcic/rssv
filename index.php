@@ -1,13 +1,14 @@
 <?php
 	
 	$file = 'data.txt';
-	if(isset($_POST["alarm"])){
+	if(isset(GET["alarm"])){
 		
-		$txt = $_POST['alarm']."\n";
+		$txt = $_GET['alarm']."\n";
 		file_put_contents($file, $txt, FILE_APPEND);
 	}
 		
-	
+	$content = file_get_contents($file);
+	echo $content;
 	
 	echo "aaaa";
 ?>
