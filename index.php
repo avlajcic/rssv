@@ -7,8 +7,9 @@
 		file_put_contents($file, $txt, FILE_APPEND);
 	}
 		
-	if ($content = file_get_contents($file, FILE_USE_INCLUDE_PATH))
-		echo $content;
+	$myfile = fopen($file, "r") or die("Unable to open file!");
+	echo fread($myfile,filesize($file));
+	fclose($myfile);
 	
 	echo "aaaa";
 ?>
