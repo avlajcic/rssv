@@ -1,5 +1,8 @@
 <?php
+	var test = 0;
 	if(isset($_GET))
-		echo $_GET['alarm'];
+		test = $_GET['alarm'];
+
+	echo test;
 
 ?>
